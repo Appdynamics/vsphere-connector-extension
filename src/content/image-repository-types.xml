@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<image-repository-types>
+	<image-repository-type>
+		<name>VMware vCenter Server</name>
+		<description>VMware vSphere</description>
+		<connector-impl-class-name>
+			com.singularity.ee.connectors.vmware.VMwareConnector 
+		</connector-impl-class-name>
+		<machine-image-save-disabled>true</machine-image-save-disabled>
+		<property-definitions>
+			<property-definition>
+				<name>Username</name>
+				<description>VMware vCenter Server Username</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+				<default-file-value></default-file-value>
+			</property-definition>
+			<property-definition>
+				<name>Password</name>
+				<description>VMware vCenter Server Password</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+				<default-file-value></default-file-value>
+			</property-definition>
+			<property-definition>
+				<name>IP Address</name>
+				<description>VMware vCenter Server IP Address</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+				<default-file-value></default-file-value>
+			</property-definition>
+			<property-definition>
+				<name>Datacenter Path</name>
+				<description>Path to Datacenter on vCenter Server</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>200</string-max-length>
+				<allowed-string-values></allowed-string-values>
+				<default-file-value></default-file-value>
+			</property-definition>
+		</property-definitions>
+	</image-repository-type>
+</image-repository-types>

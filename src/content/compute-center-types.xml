@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compute-center-types>
+	<compute-center-type>
+		<name>VMware vCenter Server</name>
+		<description>VMware vSphere</description>
+		<connector-impl-class-name>
+			com.singularity.ee.connectors.vmware.VMwareConnector 
+		</connector-impl-class-name>
+		<machine-image-save-disabled>true</machine-image-save-disabled>
+		<property-definitions>
+			<property-definition>
+				<name>Username</name>
+				<description>VMware vCenter Server Username</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+				<default-file-value></default-file-value>
+			</property-definition>
+			<property-definition>
+				<name>Password</name>
+				<description>VMware vCenter Server Password</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+				<default-file-value></default-file-value>
+			</property-definition>
+			<property-definition>
+				<name>IP Address</name>
+				<description>VMware vCenter Server IP Address</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+				<default-file-value></default-file-value>
+			</property-definition>
+			<property-definition>
+				<name>Datacenter Path</name>
+				<description>Path to Datacenter on vCenter Server</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>200</string-max-length>
+				<allowed-string-values></allowed-string-values>
+				<default-file-value></default-file-value>
+			</property-definition>
+		</property-definitions>
+		<machine-descriptor-definitions>
+		<property-definition>
+				<name>Clone Type</name>
+				<description>Full or Linked Clone on Machine Create?</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value>Linked</default-string-value>
+				<string-max-length>6</string-max-length>
+				<allowed-string-values>Full,Linked</allowed-string-values>
+			</property-definition>
+			<!--property-definition>
+				<name>Clone Destination</name>
+				<description>Clone Destination</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value>Same</default-string-value>
+				<string-max-length>6</string-max-length>
+				<allowed-string-values>Same,Specify</allowed-string-values>
+			</property-definition-->
+			<property-definition>
+				<name>Clone Destination Folder</name>
+				<description>Folder path in datacenter. If none specified, will use same folder as image.</description>
+				<required>false</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+			</property-definition>
+			<property-definition>
+				<name>Host IP</name>
+				<description>IP address of host to run on. If none specified, will use same host as image. (Must be specified for cloning from templates.)</description>
+				<required>false</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+			</property-definition>
+			<property-definition>
+				<name>Host Datastore Name</name>
+				<description>Must correspond to host specified. (Must be specified for cloning from templates.)</description>
+				<required>false</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+			</property-definition>
+			<!--property-definition>
+				<name>Keep VM On Terminate</name>
+				<description>Destroy the VM on terminate (or just shutdown)?</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value>True</default-string-value>
+				<string-max-length>5</string-max-length>
+				<allowed-string-values>True,False</allowed-string-values>
+			</property-definition-->
+
+			<!--
+				We do not need IP Settings for ESXi Direct Connect since we can
+				configure static IPs only through Virtual Center (using sysprep).
+				Assume VMs created through this connector use DHCP.
+			-->
+			<ostype name="Windows">
+				<property-definition>
+					<name>System Password</name>
+					<description>Administrator Password for Windows VM</description>
+					<required>true</required>
+					<type>STRING</type>
+					<default-string-value></default-string-value>
+					<string-max-length>50</string-max-length>
+				</property-definition>
+				<property-definition>
+					<name>Timezone</name>
+					<description>Timezone</description>
+					<required>true</required>
+					<type>STRING</type>
+					<default-string-value></default-string-value>
+					<string-max-length>4</string-max-length>
+				</property-definition>
+				<property-definition>
+					<name>Owner Organization Name</name>
+					<description>Owner Organization Name</description>
+					<required>true</required>
+					<type>STRING</type>
+					<default-string-value></default-string-value>
+					<string-max-length>50</string-max-length>
+				</property-definition>
+				<property-definition>
+					<name>Owner Name</name>
+					<description>Owner Name</description>
+					<required>true</required>
+					<type>STRING</type>
+					<default-string-value></default-string-value>
+					<string-max-length>50</string-max-length>
+				</property-definition>
+				<property-definition>
+					<name>Computer Name</name>
+					<description>Computer Name</description>
+					<required>true</required>
+					<type>STRING</type>
+					<default-string-value></default-string-value>
+					<string-max-length>50</string-max-length>
+				</property-definition>
+				<property-definition>
+					<name>ProductId</name>
+					<description>Windows License</description>
+					<required>true</required>
+					<type>STRING</type>
+					<default-string-value></default-string-value>
+					<string-max-length>29</string-max-length>
+				</property-definition>
+				<property-definition>
+					<name>Workgroup Name</name>
+					<description>Windows Workgroup Name</description>
+					<required>true</required>
+					<type>STRING</type>
+					<default-string-value></default-string-value>
+					<string-max-length>50</string-max-length>
+				</property-definition>
+			</ostype>
+			<ostype name="Linux">
+				<property-definition>
+					<name>Domain</name>
+					<description>Domain</description>
+					<required>true</required>
+					<type>STRING</type>
+					<default-string-value></default-string-value>
+					<string-max-length>50</string-max-length>
+				</property-definition>
+				<property-definition>
+					<name>Hostname</name>
+					<description>Hostname</description>
+					<required>true</required>
+					<type>STRING</type>
+					<default-string-value></default-string-value>
+					<string-max-length>50</string-max-length>
+				</property-definition>
+			</ostype>
+		</machine-descriptor-definitions>
+	</compute-center-type>
+</compute-center-types>
