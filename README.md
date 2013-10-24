@@ -33,7 +33,7 @@ vsphere-connector-extension
 
 1. Clone the vsphere-connector-extension from GitHub
 2. Run 'ant package' from the cloned vsphere-connector-extension directory
-3. Download the file terremark-connector.zip located in the 'dist' directory into \<controller install dir\>/lib/connectors
+3. Download the file vsphere-connector.zip located in the 'dist' directory into \<controller install dir\>/lib/connectors
 4. Unzip the downloaded file
 5. Restart the Controller
 6. Go to the controller dashboard on the browser. Under Setup->My Preferences->Advanced Features enable "Show Cloud Auto-Scaling features" if it is not enabled. 
