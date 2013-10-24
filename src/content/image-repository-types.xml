@@ -4,7 +4,7 @@
 		<name>VMware vCenter Server</name>
 		<description>VMware vSphere</description>
 		<connector-impl-class-name>
-            com.appdynamics.connectors.VMwareConnector
+            com.appdynamics.connectors.vsphere.VMwareConnector
         </connector-impl-class-name>
 		<machine-image-save-disabled>true</machine-image-save-disabled>
 		<property-definitions>

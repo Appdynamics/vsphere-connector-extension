@@ -1,4 +1,4 @@
-package com.appdynamics.connectors;
+package com.appdynamics.connectors.vsphere;
 
 import java.util.logging.Logger;
 
