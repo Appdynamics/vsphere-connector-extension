@@ -4,8 +4,8 @@
 		<name>VMware vCenter Server</name>
 		<description>VMware vSphere</description>
 		<connector-impl-class-name>
-			com.singularity.ee.connectors.vmware.VMwareConnector 
-		</connector-impl-class-name>
+            com.appdynamics.connectors.VMwareConnector
+        </connector-impl-class-name>
 		<machine-image-save-disabled>true</machine-image-save-disabled>
 		<property-definitions>
 			<property-definition>

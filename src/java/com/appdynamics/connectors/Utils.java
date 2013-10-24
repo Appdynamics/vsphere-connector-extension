@@ -1,4 +1,4 @@
-package com.singularity.ee.connectors.vmware;
+package com.appdynamics.connectors;
 
 import java.util.Date;
 import com.vmware.vim25.mo.Datacenter;
