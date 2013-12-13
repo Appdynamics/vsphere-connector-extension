@@ -1,5 +1,5 @@
-vsphere-connector-extension
-===================================
+vSphere Connector Extension
+===========================
 
 ##Use Case
 
