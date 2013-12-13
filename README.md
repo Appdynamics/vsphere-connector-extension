@@ -52,11 +52,11 @@ Lastly, the vsphere-connector-extension may be used to stage migration of an app
 
 Click Compute Cloud->Register Compute Cloud. Refer to the image below
 
-![alt tag](https://raw.github.com/Appdynamics/vsphere-connector-extension/master/VMWare%20vSphere%20Fields.png?login=rvasanda&token=31614924c22ebe44dcfaf3fa2f94db16)
+![alt tag](https://raw.github.com/Appdynamics/vsphere-connector-extension/master/VMWare%20vSphere%20Fields.png)
 
 Click Image->Register Image. Refer to the image below
 
-![alt tag](https://raw.github.com/Appdynamics/vsphere-connector-extension/master/VMWare%20Virtual%20Machine%20Image.png?login=rvasanda&token=db128f73c859b4ea3009c2dd68b8f3fa)
+![alt tag](https://raw.github.com/Appdynamics/vsphere-connector-extension/master/VMWare%20Virtual%20Machine%20Image.png)
 
 ##Contributing
 
