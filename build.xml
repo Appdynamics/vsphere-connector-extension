@@ -42,6 +42,12 @@
                 		<include name="*.xml" />
             		</fileset>
 		</copy>
+        <mkdir dir="${dist}/vsphere/lib"/>
+        <copy todir="${dist}/vsphere/lib">
+            <fileset dir="lib">
+                <include name="vijava*.jar" />
+            </fileset>
+        </copy>
         	<zip destfile="${dist}/vsphere-connector.zip">
                 <zipfileset dir="${dist}/vsphere" filemode="755" prefix="vsphere/"/>
         	</zip>
